@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tentang Saya</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-default navbar-dark navigation">
+        <div class="container">
+            <!-- Title logo -->
+            <picture>
+                <source media="(max-width: 768px)" srcset="images/logo/mayoreal (1).png">
+                <source media="(min-width: 768px)" srcset="images/logo/mayoreal (1).png">
+                <img class="img-fluid" src="images/logo/mayoreal (1).png" alt="title logo">
+            </picture>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            </button>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right navigation-nav ml-auto">
+                    <li><a class="nav-link" href="index.html">Halaman Utama</a></li>
+                    <li><a class="nav-link" href="work.html">Blog</a></li>
+                    <li><a class="nav-link" href="contact.html">Kontak</a></li>
+                    <li class="active"><a class="nav-link" href="about.html">Tentang Saya<span class="sr-only">(current)</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Title header -->
+    <div class="container">
+        <header class="row">
+            <div class="col-md">
+                <h1 class="text-uppercase text-center title-super">Azhriler Lintang</h1>
+                <h4 class="text-uppercase text-center title-desc">Informatika</h4>
+            </div>
+        </header>
+
+        <!-- Horizontal line -->
+        <div class="row">
+            <div class="col-md">
+                <hr>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- About -->
+        <div id="about" class="row">
+            <div class="col-md-12 muted-text">
+                <h2>Riwayat Pendidikan</h2>
+            </div>
+        </div>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Instansi</th>
+                    <th scope="col">Tahun</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>SDN Jelambar Baru 01</td>
+                    <td>2011-2017</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>SMPN 82 Jakarta</td>
+                    <td>2017-2020</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>SMAN 25 Jakarta</td>
+                    <td>2020-2023</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Universitas Sultan Ageng Tirtayasa</td>
+                    <td>2023-now</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="container-fluid copyright-footer">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="copyright-text">2024</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $('li > a').on('click', function (e) {
+            $('li').removeClass('active')
+            $(e.target).parent().addClass('active');
+        });
+        $("#project").on('shown.bs.modal', function (e) {
+            $(e.currentTarget).find('.img-fluid')[0].src = $(e.relatedTarget)[0].src.replace(/360-200/g, '768-300');
+        })
+    </script>
+
+</body>
+
+</html>

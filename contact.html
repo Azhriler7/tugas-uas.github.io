@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kontak</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-default navbar-dark navigation">
+        <div class="container">
+            <!-- Title logo -->
+            <picture>
+                <source media="(max-width: 768px)" srcset="images/logo/mayoreal (1).png">
+                <source media="(min-width: 768px)" srcset="images/logo/mayoreal (1).png">
+                <img class="img-fluid" src="images/logo/mayoreal (1).png" alt="title logo">
+            </picture>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            </button>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right navigation-nav ml-auto">
+                    <li><a class="nav-link" href="index.html">Halaman Utama</a></li>
+                    <li><a class="nav-link" href="work.html">Blog</a></li>
+                    <li class="active"><a class="nav-link" href="contact.html">Kontak<span class="sr-only">(current)</span></a></li>
+                    <li><a class="nav-link" href="about.html">Tentang Saya</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Title header -->
+    <div class="container">
+        <header class="row">
+            <div class="col-md">
+                <h1 class="text-uppercase text-center title-super">Azhriler Lintang</h1>
+                <h4 class="text-uppercase text-center title-desc">Informatika</h4>
+            </div>
+        </header>
+
+        <!-- Horizontal line -->
+        <div class="row">
+            <div class="col-md">
+                <hr>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Contact -->
+        <div id="Contact-Me" class="row">
+            <div class="col-md-12 muted-text">
+                <h2>Kontak Saya</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Contact image -->
+            <div class="col-md d-flex justify-content-center">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="images/logo/formal-3x4.png">
+                    <img class="img-fluid mx-auto d-block" src="images/logo/formal-3x4.png" alt="profile-pic">
+                </picture>
+            </div>
+
+            <!-- Contact address -->
+            <div class="col-md-7 col-sm-7">
+                <div class="contact-address">
+                    <h3 class="text-uppercase contact-title">Tentang Saya</h3>
+                    <p class="contact-desc"> Saya adalah seorang mahasiswa informatika yang penuh semangat dan antusias dalam menjelajahi teknologi modern.
+                        Saya memiliki keahlian dalam mengembangkan perangkat lunak, menganalisis data, dan memecahkan masalah teknis.
+                        Saya memiliki pengalaman dalam menggunakan bahasa pemrograman seperti Python, Java, dan JavaScript, serta memiliki pemahaman yang baik tentang konsep-konsep seperti basis data, jaringan komputer, dan keamanan informasi.
+                        Selain itu, saya aktif mengikuti perkembangan terbaru di dunia teknologi, yang membantu saya mengasah keterampilan di pasar kerja yang sangat kompetitif.</p>
+                    <p>Kontak:</p>
+                    <address>
+                        <ul>
+                            <li>Email <span class="address-list">(azhrielrl712@gmail.com)</span></li>
+                            <li>Facebook<span class="address-list">(@azhriel.azazel)</span></li>
+                            <li>Telegram<span class="address-list">(@azhrl79)</span></li>
+                            <li>Instagram<span class="address-list">(@azhrl79)</span></li>
+                        </ul>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container-fluid copyright-footer">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="copyright-text">2024</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $('li > a').on('click', function (e) {
+            $('li').removeClass('active')
+            $(e.target).parent().addClass('active');
+        });
+        $("#project").on('shown.bs.modal', function (e) {
+            $(e.currentTarget).find('.img-fluid')[0].src = $(e.relatedTarget)[0].src.replace(/360-200/g, '768-300');
+        })
+    </script>
+
+</body>
+
+</html>
